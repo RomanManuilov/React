@@ -1,0 +1,35 @@
+.comment{
+    width: 100%;
+}
+.comment-header{
+    background: #3B5998;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.comment-header-item{
+    padding: 10px;
+}
+.comment-header-item__title{
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 11pt;
+}
+.comment-header-item__user{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 11pt;
+}
+.comment-header-item__date{
+    font-size: 10pt;
+}
+.comment-body{
+    padding: 10px;
+    background: #EDEDED;
+}
+.comment-body__text{
+    
+}
