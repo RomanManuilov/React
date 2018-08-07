@@ -1,20 +1,27 @@
 import React, {Component} from 'react';
 import './style.css'
+import Search from '../Search'
 
 class Comments extends Component{
-        state = {
-            isOpen : false
-        };
+        constructor(props){
+            super(props);
+            this.state = {
+                isOpen: props.defaultOpen
+            }
+        }
     render(){
         const {comments} = this.props;
-        const body = this.state.isOpen && <section className='comment-body'>
-            <div className='comment-body__text'>
-                {comments.text}
-            </div>
-        </section>;
+        const {group} = this.props;
+        const color = group === 'sale' ?  { background: '#649D64'} : { background: '#566B98'};
+        const body = this.state.isOpen &&
+            <section className='comment-body'>
+                <div className='comment-body__text'>
+                    {comments.text}
+                </div>
+            </section>;
         return (
             <div className='comment'>
-                <div className='comment-header'>
+                <div className='comment-header' style={color}>
                     <div className='comment-header-item'>
                         <div className='comment-header-item__title'>
                             {comments.title}:

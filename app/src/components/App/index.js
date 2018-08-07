@@ -1,17 +1,26 @@
 import React from 'react';
 import CommentsList from "../CommentsList/";
-import сommentDataBase from '../../dataBaseComments.js'
+import dataBase from '../../dataBaseComments.js'
 import 'bootstrap/dist/css/bootstrap.css'
 import './style.css'
-
+import Search from "../Search";
 
 function App() {
         return (
             <div className="container-comment">
-                <div>
-                    <div className='container-comment__title'>Коментарии</div>
+                <div className='comment-caption'>
+                    <div className='caption-item'>
+                        <h5 className='caption-item__title'>
+                            Коментарии
+                        </h5>
+                    </div>
+                    <div className='caption-item'>
+                        <div className='caption-item-search'>
+                           <Search/>
+                        </div>
+                    </div>
                 </div>
-                <CommentsList comments={сommentDataBase}/>
+                <CommentsList comments={dataBase}/>
             </div>
         );
 }

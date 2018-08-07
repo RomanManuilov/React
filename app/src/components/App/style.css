@@ -2,6 +2,19 @@
     width: 90%;
     margin: 0 auto;
 }
-.container-comment__title{
+.comment-caption{
+    background: #3B5998;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.caption-item{
+
+}
+.caption-item__title{
+    color: #ffffff;
+}
+.caption-item-search{
 
 }

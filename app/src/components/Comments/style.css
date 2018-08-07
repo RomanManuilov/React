@@ -2,7 +2,6 @@
     width: 100%;
 }
 .comment-header{
-    background: #3B5998;
     display: flex;
     align-items: center;
     justify-content: space-between;
