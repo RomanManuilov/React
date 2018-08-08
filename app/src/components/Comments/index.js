@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './style.css'
-import Search from '../Search'
 
 class Comments extends Component{
         constructor(props){
