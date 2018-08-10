@@ -27,7 +27,7 @@ class Comments extends Component{
                         </div>
                         <div className='comment-header-item__user'>{comments.user}</div>
                         <div className='comment-header-item__date'>
-                            date: {(new Date(comments.date).toDateString())}
+                            Дата: {comments.date}
                         </div>
                     </div>
                     <div className='comment-header-item'>

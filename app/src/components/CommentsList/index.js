@@ -11,17 +11,16 @@ class CommentsList extends Component{
      }
     };
     handelSearch = (event) => {
-        var searchQuery = event.target.value;
-        var displayedComments = dataBase.filter(function (el) {
-            var userVal = el.user.toLowerCase();
-            var dateVal = el.date.toLowerCase();
-            console.log(typeof searchQuery);
-            return typeof(searchQuery) !== "number"  ? userVal.indexOf(searchQuery) !== -1 :  dateVal.indexOf(searchQuery) !== -1;
+        let searchQuery = event.target.value.toLowerCase();
+        let displayedComments = dataBase.filter(function (el) {
+            let userVal = el.user.toLowerCase();
+            let dateVal = el.date.toLowerCase();
+            return parseInt(searchQuery) ? dateVal.indexOf(searchQuery) !== -1 :  userVal.indexOf(searchQuery) !== -1;
         });
         this.setState({
             displayedComments: displayedComments
         })
-    }
+    };
     render() {
         return (
             <div>

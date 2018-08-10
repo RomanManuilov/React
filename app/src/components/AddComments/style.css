@@ -1,0 +1,28 @@
+.container-addComments{
+   
+}
+.addComments__title{}
+.addComments{
+    display: flex;
+}
+.addComments-block{
+    margin-right: 10px;
+}
+.addComments__text{}
+.addComments{}
+.addComments-item{
+    display: flex;
+    margin-bottom: 5px;
+}
+.addComments-item__btn{
+    margin-right: 5px;
+}
+.addComments-item__color{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.addComments-item__send{}
+.addComments-bold{
+    font-weight: bold;
+}
