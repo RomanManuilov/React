@@ -2,8 +2,14 @@ import React, {Component} from 'react';
 import './style.css'
 
 class AddComments extends Component{
+    constructor(){
+        super()
+        this.state = {
+            currentElem : true
+        }
+    }
     render(){
-
+        const showResult = <div className='addComments__show' id='show'></div>
         return(
             <div className='container-addComments'>
                 <div className='addComments__title'>Добавить коментрии</div>
@@ -13,8 +19,8 @@ class AddComments extends Component{
                     </div>
                     <div className='addComments-block'>
                         <div className='addComments-item'>
-                            <button className='addComments-item__btn' type='bold' onClick={this.handleClick}>B</button>
-                            <button className='addComments-item__btn'>I</button>
+                            <button className='addComments-item__btn' onClick={this.handleClick}>B</button>
+                            <button className='addComments-item__btn' onClick={this.handleClick}>I</button>
                             <button className='addComments-item__btn'>U</button>
                         </div>
                         <div className='addComments-item'>
@@ -27,16 +33,29 @@ class AddComments extends Component{
                         </div>
                     </div>
                 </div>
-                <div className='addComments__show' id='show'></div>
+                {showResult}
             </div>
         )
     }
     handleClick =()=>{
         let text = document.getElementById('text').value;
-        let div = document.createElement("div");
-        div.className = 'addComments-bold'
-        div.innerText = text;
-        document.getElementById('show').appendChild(div);
+        document.getElementById('show').innerText =  text;
+        let div = document.getElementById('show');
+        console.log(type);
+        function typeButton (type) {
+            if(type === "bold")
+            {
+                return  div.classList.add('addComments-italic')
+            }
+            else if(type === 'italic')
+            {
+                return  div.classList.add('addComments-italic')
+            }
+        }
+        this.setState({
+            currentElem : typeButton(this.state.props)
+        })
+
     }
 }
 export default AddComments
