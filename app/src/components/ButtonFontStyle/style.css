@@ -1,0 +1,18 @@
+.addComments-item__btn-off{
+    margin-right: 5px;
+    background: #DDDDDD;
+    width: 25px;
+}
+.addComments-item__btn-on{
+    border: 1px solid #2E6DA4;
+    margin-right: 5px;
+    background: #337AB7;
+    color:#ffffff;
+}
+
+.addComments-bold{
+    font-weight: bold;
+}
+.addComments-italic {
+    font-style: italic;
+}

@@ -14,12 +14,20 @@
     display: flex;
     margin-bottom: 5px;
 }
-.addComments-item__btn{
+.addComments-item__btn-off{
     margin-right: 5px;
+    background: #DDDDDD;
+    width: 25px;
+}
+.addComments-item__btn-on{
+    border: 1px solid #2E6DA4;
+    margin-right: 5px;
+    background: #337AB7;
+    color:#ffffff;
 }
 .addComments-item__color{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin-right: 5px;
 }
 .addComments-item__send{}
